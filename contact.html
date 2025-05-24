@@ -19,16 +19,18 @@
   </nav>
   <section id="contact">
     <h2>Get a Custom Music Quote</h2>
-    <p>Need a jingle, track, or soundscape? Fill out the form below to discuss your project.</p>
-    <form action="https://formspree.io/your-email" method="POST">
+    <p>Need a jingle, track, or soundscape? Fill out the form below to reach me directly.</p>
+    <form id="contact-form" onsubmit="sendEmail(); return false;">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Describe your project (e.g., jingle, DnB track)" required></textarea>
       <button type="submit">Send</button>
     </form>
+    <p id="form-message"></p>
   </section>
   <footer>
     <p>© 2025 VibeForge Music. All rights reserved.</p>
   </footer>
+  <script src="main.bundle.js"></script>
 </body>
 </html>
