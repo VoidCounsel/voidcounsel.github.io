@@ -20,12 +20,20 @@
   </nav>
   <section id="contact">
     <h2>Get a Custom Music Quote</h2>
-    <p>Need a jingle, track, or soundscape? Fill out the form below to reach me directly.</p>
+    <p>Need a jingle, track, or soundscape? Drop your vibe below and let’s make some noise.</p>
     <form id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Describe your project (e.g., jingle, DnB track)" required></textarea>
-      <button type="submit">Send</button>
+      <input type="text" name="name" placeholder="Your Name, Maestro" required>
+      <input type="email" name="email" placeholder="your@vibe.com" required>
+      <select name="genre" required>
+        <option value="" disabled selected>Pick Your Genre</option>
+        <option value="cyberpunk-hiphop">Cyberpunk Hip-Hop</option>
+        <option value="synthwave-rock">Synthwave Rock</option>
+        <option value="jazz-trap">Jazz-Trap Fusion</option>
+        <option value="baroque-metal">Baroque Metal</option>
+        <option value="other">Other (Spill it below)</option>
+      </select>
+      <textarea name="message" placeholder="What’s the project? Jingle for an ad? DnB banger for your film? Lay it down." required></textarea>
+      <button type="submit">Crank It Up</button>
     </form>
     <p id="form-message"></p>
   </section>
