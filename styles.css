@@ -1,76 +1,93 @@
-/* Cyberpunk-inspired theme for VibeForge with neon accents and genre-bending energy */
-body {
-  background: linear-gradient(135deg, #1a0b2e 0%, #0f0f0f 100%); /* Gradient from deep purple to black */
-  color: #e0e0e0; /* Light gray text for readability */
-  font-family: 'Roboto Mono', monospace; /* Gritty, futuristic font */
+/* Cyberpunk theme for VibeForge */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1A1A1A;
+  color: #E0E0E0;
+  font-family: 'Orbitron', sans-serif;
   line-height: 1.6;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://source.unsplash.com/random/1920x1080?cyberpunk');
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 header {
-  background: #000; /* Pure black header */
-  padding: 20px;
+  background: #000000CC;
+  padding: 1.5rem;
   text-align: center;
-  border-bottom: 2px solid #ff00ff; /* Neon pink border for extra edge */
-  box-shadow: 0 0 15px rgba(255, 0, 255, 0.3); /* Subtle glow */
+  border-bottom: 4px solid #FF69B4;
 }
 
 h1 {
-  font-family: 'Orbitron', sans-serif; /* Bold, sci-fi font */
-  font-size: 2.5em;
-  color: #ff00ff; /* Neon pink for VibeForge brand */
-  margin: 0;
-  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: #00FFFF;
+  text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+  animation: glitch 2s infinite;
 }
 
 h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.8em;
-  color: #00ccff; /* Electric blue for section headers */
-  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #C026D3;
+  text-shadow: 0 0 8px #C026D3;
+  margin-bottom: 1rem;
+}
+
+nav {
+  background: #111111CC;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: #00FFFF;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #FF69B4;
+  text-shadow: 0 0 6px #FF69B4;
 }
 
 section {
-  margin: 30px auto;
-  max-width: 800px; /* Centered content */
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black for depth */
-  border: 1px solid #ff00ff; /* Neon pink border */
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.2); /* Cyberpunk glow */
-}
-
-#portfolio iframe {
-  width: 100%;
-  height: 150px;
-  border: none;
-  margin: 10px 0;
-}
-
-#portfolio p, #about p {
-  font-size: 1.1em;
-  color: #e0e0e0;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #22222299;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #00FFFF33;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
+  gap: 1rem;
 }
 
-input, textarea, select {
-  background: #1a1a1a; /* Darker input fields */
-  color: #e0e0e0;
-  border: 1px solid #ff00ff; /* Neon pink borders */
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 1em;
-  font-family: 'Roboto Mono', monospace;
-  transition: border-color 0.3s;
+input, select, textarea {
+  background: #333333;
+  border: 2px solid #00FFFF;
+  color: #E0E0E0;
+  padding: 0.75rem;
+  border-radius: 5px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s;
+  box-shadow: 0 0 8px #00FFFF33;
 }
 
-input:focus, textarea:focus, select:focus {
-  border-color: #00ccff; /* Cyan glow on focus */
+input:focus, select:focus, textarea:focus {
+  border-color: #FF69B4;
+  box-shadow: 0 0 12px #FF69B499;
   outline: none;
 }
 
@@ -80,62 +97,54 @@ textarea {
 }
 
 button {
-  background: #ff00ff; /* Neon pink button */
+  background: #FF69B4;
   color: #000;
-  padding: 12px;
+  padding: 0.75rem;
   border: none;
-  font-size: 1em;
+  border-radius: 5px;
   font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s;
+  box-shadow: 0 0 12px #FF69B466;
+  animation: pulse 1.5s infinite;
 }
 
 button:hover {
-  background: #cc00cc; /* Darker pink on hover */
+  background: #00FFFF;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00FFFF99;
 }
 
-nav {
-  background: #111;
-  padding: 10px;
+#form-message.text-green {
+  color: #4ADE80;
   text-align: center;
-  border-bottom: 1px solid #00ccff; /* Cyan accent */
+  margin-top: 1rem;
+  text-shadow: 0 0 6px #4ADE8044;
 }
 
-nav a {
-  color: #00ccff;
-  margin: 0 15px;
-  text-decoration: none;
-  font-size: 1.1em;
-  font-family: 'Roboto Mono', monospace;
-}
-
-nav a:hover {
-  color: #ff00ff; /* Neon pink on hover */
+#form-message.text-red {
+  color: #F87171;
+  text-align: center;
+  margin-top: 1rem;
+  text-shadow: 0 0 6px #F8717144;
 }
 
 footer {
-  background: #000;
-  color: #e0e0e0;
+  background: #000000CC;
+  color: #888;
   text-align: center;
-  padding: 10px;
+  padding: 1rem;
+  border-top: 4px solid #00FFFF;
   position: relative;
   bottom: 0;
   width: 100%;
-  border-top: 1px solid #ff00ff; /* Neon pink footer border */
 }
 
-.text-red {
-  color: #ff4d4d;
-}
-
-.text-green {
-  color: #ff00ff; /* Match button color for success message */
-}
-
-/* Responsive design for mobile */
-@media (max-width: 600px) {
-  h1 { font-size: 2em; }
-  h2 { font-size: 1.5em; }
-  section { padding: 15px; }
-  form { max-width: 100%; }
-}
+/* Glitch animation */
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40%
