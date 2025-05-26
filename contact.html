@@ -6,6 +6,7 @@
   <meta name="keywords" content="music production, custom jingles, contact">
   <title>Contact - VibeForge Music</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
 </head>
 <body>
   <header>
@@ -20,7 +21,7 @@
   <section id="contact">
     <h2>Get a Custom Music Quote</h2>
     <p>Need a jingle, track, or soundscape? Fill out the form below to reach me directly.</p>
-    <form id="contact-form" onsubmit="sendEmail(); return false;">
+    <form id="contact-form">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Describe your project (e.g., jingle, DnB track)" required></textarea>
@@ -31,6 +32,28 @@
   <footer>
     <p>© 2025 VibeForge Music. All rights reserved.</p>
   </footer>
-  <script src="main.bundle.js"></script>
+  <script>
+    (function() {
+      emailjs.init("ToEE9k_f_JDYIz3DS");
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const message = document.getElementById("form-message");
+      message.classList.remove("text-red", "text-green");
+      message.textContent = "Forging your vibe...";
+
+      emailjs.sendForm("service_8inxmcr", "template_pdf9r0o", this)
+        .then(() => {
+          message.textContent = "Vibe sent! Expect some sonic heat soon.";
+          message.classList.add("text-green");
+          this.reset();
+        })
+        .catch(() => {
+          message.textContent = "Vibe crashed. Check your setup and retry.";
+          message.classList.add("text-red");
+        });
+    });
+  </script>
 </body>
 </html>
