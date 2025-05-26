@@ -1,5 +1,5 @@
-/* Cyberpunk theme for VibeForge */
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+/* Cyberpunk VibeForge theme, dialed back for chill vibes */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
 
 * {
   margin: 0;
@@ -10,9 +10,9 @@
 body {
   background: #1a1a1a;
   color: #e0e0e0;
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   line-height: 1.6;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://source.unsplash.com/random/1920x1080?cyberpunk,neon');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95)), url('https://source.unsplash.com/random/1920x1080?cyberpunk,neon');
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
@@ -20,166 +20,48 @@ body {
   overflow-x: hidden;
 }
 
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 255, 153, 0.1), transparent);
+  opacity: 0.3;
+  animation: static 2s infinite alternate ease-in-out;
+}
+
 header {
-  background: #111111cc;
-  padding: 2rem;
+  background: #111111dd;
+  padding: 2.5rem;
   text-align: center;
-  border-bottom: 5px solid #00ff99;
-  box-shadow: 0 0 20px #00ff9933;
+  border-bottom: 6px solid #00ff99;
+  box-shadow: 0 0 20px #00ff9944;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #00ccff;
   text-shadow: 0 0 15px #00ccff, 0 0 25px #00ccffaa;
   text-transform: lowercase;
-  letter-spacing: 2px;
-  animation: glitch 1.8s infinite;
+  letter-spacing: 3px;
+  font-weight: 700;
+  animation: fade-glow 3s infinite ease-in-out;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #00ff99;
-  text-shadow: 0 0 10px #00ff9944;
-  margin-bottom: 1.2rem;
+  text-shadow: 0 0 10px #00ff9966;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
 }
 
 nav {
-  background: #0a0a0acc;
-  padding: 1.2rem;
+  background: #0a0a0add;
+  padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 0 15px #00ccff22;
-}
-
-nav a {
-  color: #00ccff;
-  margin: 0 1.2rem;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-  text-shadow: 0 0 5px #00ccff44;
-}
-
-nav a:hover {
-  color: #00ff99;
-  text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99aa;
-  transform: translateY(-2px);
-  display: inline-block;
-}
-
-section {
-  max-width: 850px;
-  margin: 2.5rem auto;
-  padding: 2rem;
-  background: #222222aa;
-  border-radius: 10px;
-  box-shadow: 0 0 25px #00ff9933;
-  border: 1px solid #00ccff44;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-input, select, textarea {
-  background: #333;
-  border: 3px solid #00ff99;
-  color: #e0e0e0;
-  padding: 1rem;
-  border-radius: 6px;
-  font-family: 'Exo 2', sans-serif;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 12px #00ff9944;
-}
-
-input:focus, select:focus, textarea:focus {
-  border-color: #00ccff;
-  box-shadow: 0 0 20px #00ccff99, 0 0 30px #00ccff66;
-  outline: none;
-  transform: scale(1.02);
-}
-
-textarea {
-  height: 160px;
-  resize: vertical;
-}
-
-button {
-  background: #00ff99;
-  color: #000;
-  padding: 1rem;
-  border: none;
-  border-radius: 6px;
-  font-family: 'Exo 2', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 20px #00ff9966, 0 0 30px #00ff9933;
-  animation: pulse 1.2s infinite;
-}
-
-button:hover {
-  background: #00ccff;
-  color: #000;
-  transform: scale(1.08) rotate(1deg);
-  box-shadow: 0 0 30px #00ccffaa, 0 0 50px #00ccff66;
-}
-
-#form-message.text-green {
-  color: #00ff99;
-  text-align: center;
-  margin-top: 1.2rem;
-  text-shadow: 0 0 8px #00ff9944;
-  font-size: 1.1rem;
-}
-
-#form-message.text-red {
-  color: #ff5555;
-  text-align: center;
-  margin-top: 1.2rem;
-  text-shadow: 0 0 8px #ff555544;
-  font-size: 1.1rem;
-}
-
-footer {
-  background: #111111cc;
-  color: #888;
-  text-align: center;
-  padding: 1.2rem;
-  border-top: 5px solid #00ff99;
-  box-shadow: 0 0 20px #00ff9933;
+  box-shadow: 0 0 15px #00ccff33;
   position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-/* Glitch animation */
-@keyframes glitch {
-  0% { transform: translate(0); }
-  15% { transform: translate(-3px, 3px); }
-  30% { transform: translate(3px, -3px); }
-  45% { transform: translate(-3px, 3px); }
-  60% { transform: translate(3px, -3px); }
-  75% { transform: translate(-3px, 3px); }
-  100% { transform: translate(0); }
-}
-
-/* Pulse animation */
-@keyframes pulse {
-  0% { box-shadow: 0 0 20px #00ff9966, 0 0 30px #00ff9933; }
-  50% { box-shadow: 0 0 30px #00ff99aa, 0 0 50px #00ff9966; }
-  100% { box-shadow: 0 0 20px #00ff9966, 0 0 30px #00ff9933; }
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  h1 { font-size: 2.2rem; }
-  h2 { font-size: 1.6rem; }
-  section { padding: 1.2rem; margin: 1rem; }
-  nav a { margin: 0 0.6rem; font-size: 1rem; }
-  input, select, textarea, button { font-size: 1rem; padding: 0.8rem; }
-}
+  z-index: 10
