@@ -137,16 +137,16 @@ button:hover {
   text-align: center;
   margin-top: 1rem;
   text-shadow: 0 0 5px #00ff9977;
-  font-size: 1.1rem;
+  font-size: 1.1em;
   font-weight: 600;
 }
 
 #form-message.text-red {
   color: #ff5555;
-  text-align: center;
+  text-align: left;
   margin-top: 1rem;
   text-shadow: 0 0 5px #ff555577;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -175,11 +175,11 @@ footer {
   100% { text-shadow: 0 0 8px #00ccff, 0 0 12px #00ccff88; box-shadow: 0 0 15px #00ff99aa; }
 }
 
-/* Responsive */
+/* Responsive design */
 @media (max-width: 600px) {
   h1 { font-size: 2.2rem; }
   h2 { font-size: 1.6rem; }
-  section { padding: 1.2rem; margin: 1rem; }
+  section { margin: 1rem; padding: 1.2rem; }
   nav a { margin: 0 0.6rem; font-size: 1rem; }
   input, select, textarea, button { font-size: 1rem; padding: 0.8rem; }
 }
